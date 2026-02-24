@@ -1,3 +1,3 @@
-export function Button() {
-  return <button>Mi Boton</button>;
+export function Button({ text }: { text: string }) {
+  return <button onClick={() => alert("hola")}>{text}</button>;
 }

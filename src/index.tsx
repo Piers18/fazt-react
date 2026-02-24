@@ -1,35 +1,16 @@
 import { createRoot } from "react-dom/client";
-import { UserCard } from "./Greeting";
+import { TaskCard } from "./Task";
 import { Button } from "./Button";
 
 const root = createRoot(document.getElementById("root")!);
 
 root.render(
   <>
-    <UserCard
-      name="Piero"
-      age={25}
-      amount={100}
-      married={true}
-      points={[1, 2, 3, 4, 5]}
-      address={{ street: "Calle Falsa", number: 123 }}
-      greet={(name: string) => {
-        console.log(name);
-      }}
-    />
-
-    <UserCard
-      name="Juan"
-      age={28}
-      amount={200}
-      married={false}
-      points={[1, 2, 3, 4, 5]}
-      address={{ street: "Calle Falsa", number: 456 }}
-      greet={(name: string) => {
-        console.log(name);
-      }}
-    />
-
-    <Button />
+    <TaskCard />
+    <TaskCard />
+    <TaskCard />
+    <TaskCard />
+    <Button text="Click me" />
+    <input type="text" onChange={(e) => console.log(e.target.value)} />
   </>
 );
